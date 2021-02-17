@@ -1,0 +1,48 @@
+﻿@page
+@model Blog.Areas.Admin.Pages.Post.AddModel
+@{
+}
+
+<form method="post">
+    <p>
+        <label asp-for="BindPost.Title"></label><br>
+        <input asp-for="BindPost.Title" />
+    </p>
+    <p>
+    <p>
+        <label asp-for="BindPost.Description"></label><br>
+        <textarea asp-for="BindPost.Description" cols="40" rows="5"></textarea>
+    </p>
+    <p>
+        <label asp-for="BindPost.Text"></label><br>
+        <textarea asp-for="BindPost.Text" cols="40" rows="20"></textarea>
+    </p>
+    <p>
+        <label asp-for="BindPost.Author"></label><br>
+        <input asp-for="BindPost.Author" />
+    </p>
+    <p>
+        <label>
+            Введите где лежит миниатюра<br>
+            <input type="text" name="img" id="img">
+        </label>
+    </p>
+    <p>
+        <label asp-for="BindPost.Category_id"></label><br />
+        <select asp-for="BindPost.Category_id">
+            @foreach (var Category in Model.Categories)
+            {
+                <option value="@Category.Id">@Category.Title</option>
+            }
+        </select>
+    </p>
+    <p>
+        <label asp-for="BindPost.Secret">Добавлять в секретный раздел?</label><br />
+        <input asp-for="BindPost.Secret" />
+    </p>
+    <p>
+        <label>
+            <input type="submit" name="submit" id="submit" value="Занести заметку в базу">
+        </label>
+    </p>
+</form>

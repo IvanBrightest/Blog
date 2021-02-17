@@ -1,0 +1,11 @@
+﻿@model int
+
+<form action="vote_res.php" method="post" name="vv">
+<p class="pvote">Оцените заметку: 1 <input name="score" type="radio" value="1"> 2 <input name="score" type="radio" value="2"> 3 <input name="score" type="radio" value="3"> 4 <input name="score" type="radio" value="4"> 5 <input name="score" type="radio" value="5" checked="">
+<input class="sub_vote" name="submit" type="submit" value="Оценить">
+<input name="id" type="hidden" value='@Model.ToString()' />
+
+</p>
+
+
+</form>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/admin/css/style.css" />
+</head>
+<body>
+    <table width="690" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="main_border">
+        <!--Подключаем шапку сайта-->
+        <tr>
+            <td>
+            <img src="~/admin/images/header.jpg" width="690" height="100"></td>
+        </tr>
+        <tr>
+            <td>
+                <table width="690" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <!--Подключаем левый блок сайта-->
+                        <td width="182px" valign="top" class="left">
+                            <p align="center" class="title">Заметки</p>
+                            <div id="coolmenu">
+                                <a asp-page="/Post/Add">Добавить</a>
+                                <a asp-page="/Post/Edit">Редактировать</a>
+                                <a href="del_post.php">Удалить</a>
+                            </div>
+
+                            <p align="center" class="title">Категории</p>
+                            <div id="coolmenu">
+                                <a asp-page="/Category/Add">Добавить</a>
+                                <a asp-page="/Category/Edit">Редактировать</a>
+                                <a href="del_cat.php">Удалить</a>
+                            </div>
+
+                            <p align="center" class="title">Друзья</p>
+                            <div id="coolmenu">
+                                <a href="new_friend.php">Добавить</a>
+                                <a href="edit_friend.php">Редактировать</a>
+                                <a href="del_friend.php">Удалить</a>
+                            </div>
+
+                            <p align="center" class="title">Тексты</p>
+                            <div id="coolmenu">
+                                <a href="edit_text.php">Редактировать</a>
+                            </div>
+
+                            <p align="center" class="title">Полезное</p>
+                            <div id="coolmenu">
+                                <a href="/Admin">Главная</a>
+                            </div>
+                        </td>
+                        <td valign="top">
+                            @RenderBody()
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--Подключаем нижний графический элемент-->
+        <tr>
+            <td><img src="~/admin/images/footer.jpg" width="690" height="18"></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,111 @@
+﻿@page "{id}"
+@model Blog.Pages.Post.DetailModel
+
+<p class="post_title2">@Model.GetPost.Title</p>
+<p class="post_add">Автор: @Model.GetPost.Author</p><p class="post_add">Дата: @Model.GetPost.Date.ToString("dd MMMM yyyy")</p>
+
+@Html.Raw(@Model.GetPost.Text)
+
+<p class="post_view">Просмотров: @Model.GetPost.View</p>
+
+<partial name="_VotingPage" model="@Model.GetPost.Id" />
+
+
+<p class="post_comment">Комментарии к этой заметке:</p>
+
+<style>
+body 
+{
+    font-family: Verdana;
+    font-size:12px;
+}
+
+ul 
+{
+    list-style-type: none;
+	padding-right: 15px;
+}
+
+#commentRoot li
+{
+    margin: 7px 0 7px 7px;
+}
+
+#commentRoot li a
+{
+	float: right;
+	clear: both;
+}
+
+#commentRoot li .commentContent
+{
+    border: solid 1px #ccc;
+    padding: 5px 10px;
+}
+#commentRoot li h6 
+{
+    color: green;
+}
+#commentRoot li h6  span 
+{
+    color: #666; font-size: 11px;  
+    margin-left: 20px;
+}
+#commentRoot li .comment
+{
+    margin-top: 5px;
+}
+#commentRoot li a.reply
+{
+    font-size: 11px; 
+} 
+
+/*  Формочка */
+	#newComment, .loader {display: none;}
+#cancelComment
+{
+    float: right; width: 20px; color: red; cursor: pointer;
+}
+#newComment input
+{
+    height: 26px; width: 250px; padding: 0 5px ; margin-left: 50px; 
+    border: solid 1px #ccc;
+}
+#newComment textarea
+{
+    width: 350px;  height: 100px; margin-left: 5px; 
+    vertical-align: middle; border: solid 1px #ccc;
+}
+#newComment button
+{
+    margin-left: 102px; margin-top: 10px;
+}   
+</style>
+<script type="text/javascript" src="./comments/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="./comments/comment.js"></script>
+
+<ul id="commentRoot">
+ <li id="comment10">
+    <div class="commentContent">
+        <h6>Зинаида <span></span> </h6>
+        <div class="comment">
+            Классно        </div>
+        <a class="reply" href="#comment10">Ответить</a>
+    </div>
+    </li>  
+<li id="newComment">
+   <div class="commentContent">
+      <div id="cancelComment">X</div>
+			<input type="hidden" name="post_id" value="1">
+          <h6>Ваше имя: <input name="name" type="text"> <span></span> </h6>
+          <div class="comment">
+              Комментарий: 
+              <textarea name="newCommentText"></textarea>
+          </div>
+          
+         <button>Сохранить</button><img class="loader" src="./comments/loader.gif">
+      </div>                            
+  </li>
+
+</ul> 
+<button id="addNewComment">Добавить комментарий</button>

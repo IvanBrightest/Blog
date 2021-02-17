@@ -1,0 +1,98 @@
+﻿<td width="182" valign="top" class="left">
+    <div class="nav_title">Профиль</div>
+    <p>
+        Профиль:	<a href="page.php?id=1">Administrator</a><br>
+        <br>
+        <img alt='Administrator' src='avatars/1601407613.jpg' />
+    </p>
+    <a href='all_users.php'>Список пользователей</a>|<a href='exit.php'>Выход</a>
+
+    <vc:list-category />
+    
+    <div class="nav_title">Последние заметки</div>
+
+    <p class='point'><img src='img/arr2.jpg' height='10' width='10'><a class='nav_link' href='view_post.php?id=10'>Природа красок в фотошопе</a></p><p class='point'><img src='img/arr2.jpg' height='10' width='10'><a class='nav_link' href='view_post.php?id=9'>Природа кисти в Фотошопе</a></p><p class='point'><img src='img/arr2.jpg' height='10' width='10'><a class='nav_link' href='view_post.php?id=6'>Маскируем тэг H1</a></p><p class='point'><img src='img/arr2.jpg' height='10' width='10'><a class='nav_link' href='view_post.php?id=4'>Перевод западных PHP сайтов</a></p><p class='point'><img src='img/arr2.jpg' height='10' width='10'><a class='nav_link' href='view_post.php?id=3'>Маскируем партнерскую ссылку на PHP</a></p>
+
+    <div class="nav_title">Архив</div>
+    <p class='point'><img src='img/arr3.jpg' height='10' width='10'><a class='nav_link' href='view_date.php?date=2014-05'>2014-05</a></p><p class='point'><img src='img/arr3.jpg' height='10' width='10'><a class='nav_link' href='view_date.php?date=2008-11'>2008-11</a></p><p class='point'><img src='img/arr3.jpg' height='10' width='10'><a class='nav_link' href='view_date.php?date=2007-08'>2007-08</a></p><p class='point'><img src='img/arr3.jpg' height='10' width='10'><a class='nav_link' href='view_date.php?date=2007-07'>2007-07</a></p><p class='point'><img src='img/arr3.jpg' height='10' width='10'><a class='nav_link' href='view_date.php?date=2007-05'>2007-05</a></p>
+
+    <div class="nav_title">Блоги друзей</div>
+
+    <p class='point'><img src='img/arr4.jpg' height='10' width='10'><a class='nav_link' href='http://ruseller.com' target='_blank'>Школа мастерства</a></p><p class='point'><img src='img/arr4.jpg' height='10' width='10'><a class='nav_link' href='http://photoshop-master.ru' target='_blank'>Фотошоп Уроки</a></p><p class='point'><img src='img/arr4.jpg' height='10' width='10'><a class='nav_link' href='http://ruseller-board.com' target='_blank'>Форум по этому курсу</a></p><p class='point'><img src='img/arr4.jpg' height='10' width='10'><a class='nav_link' href='http://www.phpstudent.ru' target='_blank'>Студент PHP</a></p>
+    <div class="nav_title">Поиск</div>
+
+    <form action="view_search.php" method="post" name="form_s">
+
+        <p class="search_t">Поисковый запрос должен быть не менее 4-х символов.</p>
+        <p>
+            <input name="search" type="text" size="25" maxlength="40">
+            <br>
+            <input class="search_b" name="submit_s" type="submit" value="Искать">
+        </p>
+
+
+    </form>
+
+
+
+
+    <p><a href="secret.php">Секретный раздел</a></p>
+    <p><a href="gb.php">Гостевая</a></p>
+
+    <div class="nav_title">Курсы валют</div>
+
+
+
+
+    <div class="nav_title">Статистика</div>
+
+
+    <div class="nav_title">Опрос</div>
+    <br>
+    <table width="$pollvars[table_width]" border="0" align="center" cellspacing="0" cellpadding="1" bgcolor="$pollvars[bgcolor_fr]">
+        <tr align="center">
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="2" align="center" bgcolor="$pollvars[bgcolor_tab]">
+                    <tr valign="middle">
+                        <td height="40"><font face="$pollvars[font_face]" color="$pollvars[font_color]" size="1"><b>$question</b></font></td>
+                    </tr>
+                    <tr align="left" valign="bottom">
+                        <td>
+                            <table border="0" cellspacing="0" cellpadding="1" width="100%" align="center">
+                                <tr valign="top">
+                                    <td>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="1" align="center">
+                                            <tr>
+                                                <td height="22"><font face="$pollvars[font_face]" color="$pollvars[font_color]" size="1">$option_text</font></td>
+                                                <td nowrap height="22"><font face="$pollvars[font_face]" color="$pollvars[font_color]" size="1"><img src="$pollvars[base_gif]/$poll_color.gif" width="$img_width" height="$pollvars[img_height]"> $vote_val</font></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="22"><font face="$pollvars[font_face]" color="$pollvars[font_color]" size="1">$option_text</font></td>
+                                                <td nowrap height="22"><font face="$pollvars[font_face]" color="$pollvars[font_color]" size="1"><img src="$pollvars[base_gif]/$poll_color.gif" width="$img_width" height="$pollvars[img_height]"> $vote_val</font></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="22"><font face="$pollvars[font_face]" color="$pollvars[font_color]" size="1">$option_text</font></td>
+                                                <td nowrap height="22"><font face="$pollvars[font_face]" color="$pollvars[font_color]" size="1"><img src="$pollvars[base_gif]/$poll_color.gif" width="$img_width" height="$pollvars[img_height]"> $vote_val</font></td>
+                                            </tr>
+                                        </table>
+                                        <font face="$pollvars[font_face]" color="$pollvars[font_color]" size="1">
+                                            <br>
+                                            $pollvars[total_text]: <font color="#CC0000">$total_votes</font><br>
+                                            $VOTE<br><br><div align="center">
+                                                $COMMENT&nbsp;
+                                            </div>
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr><td height="2">&nbsp;</td></tr>
+                            </table>
+                            <font face="$pollvars[font_face]" size="1"><a href="http://www.proxy2.de" target="_blank" title="Advanced Poll">Version $pollvars[poll_version]</a></font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
+</td>

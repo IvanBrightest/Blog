@@ -1,0 +1,27 @@
+﻿@page "{id?}"
+@model MyApp.Namespace.EditModel
+@{
+}
+
+@if(Model.categories != null)
+{
+	foreach (var category in Model.categories)
+    {
+        <p><a asp-route-id="@category.Id">@category.Title</a></p>
+    }
+}
+else
+{
+	<h3 align='center'>Редактирование категории</h3>
+<form method='post'>
+	<p>
+		<label asp-for="@Model.Category.Title">Введите название категории</label><br />
+		<input asp-for="@Model.Category.Title" />
+    </p>
+	<p>
+		<label>
+			<input type="submit" value="Сохранить изменения" />
+		</label>
+	</p>
+</form>
+}

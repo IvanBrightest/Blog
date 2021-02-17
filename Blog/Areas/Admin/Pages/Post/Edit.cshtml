@@ -1,0 +1,61 @@
+﻿@page "{id?}"
+@model Blog.Areas.Admin.Pages.Post.EditModel
+@{
+}
+
+
+@if (Model.Posts != null)
+{
+    foreach (var post in Model.Posts)
+    {
+        <p><a asp-route-id="@post.Id">@post.Title</a></p>
+    }
+}
+else
+{
+    <h3 align='center'>Редактирование заметки</h3>
+    <form method='post'>
+        <p>
+            <label asp-for="BindPost.Category_id">Выберите категорию для заметки</label><br />
+            
+            @Html.DropDownListFor(m => m.BindPost.Category_id, new SelectList(Model.Categories, "Id", "Title", Model.BindPost.Category_id))
+        </p>
+        <p>
+            <label asp-for="BindPost.Secret">Добавлять в секретный раздел?<br></label>
+            <input asp-for="BindPost.Secret" />
+        </p>
+        <p>
+            <label asp-for="BindPost.Title"></label><br />
+            <input asp-for="BindPost.Title" />
+        </p>
+        <p>
+            <label asp-for="BindPost.Date"></label>
+            <input asp-for="BindPost.Date" disabled />
+        </p>
+        <p>
+            <label asp-for="BindPost.Description"></label><br />
+            <textarea asp-for="BindPost.Description" cols="40" rows="5"></textarea>
+        </p>
+        <p>
+            <label asp-for="BindPost.Text"></label><br />
+            <textarea asp-for="BindPost.Text" cols="40" rows="20"></textarea>
+        </p>
+        <p>
+            <label asp-for="BindPost.Author"></label><br />
+            <input asp-for="BindPost.Author" />
+        </p>
+        <p>
+            <label>
+                Введите где лежит миниатюра<br>
+                <input value="files/310807/colors/mini.jpg" type="text" name="img" id="img">
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="submit" name="submit" id="submit" value="Сохранить изменения">
+            </label>
+        </p>
+    </form>
+
+
+}

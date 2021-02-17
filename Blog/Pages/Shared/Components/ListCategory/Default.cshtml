@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Blog.Models.Category>
+
+<div class="nav_title">Категории</div>
+<ul class="lst_categories">
+    @foreach (var cat in Model)
+    {
+        <li>
+            <a class="nav_link" href="/Category/@cat.Id">@cat.Title</a>
+        </li>
+    }
+</ul>

@@ -1,0 +1,18 @@
+﻿@page
+@model Blog.Areas.Admin.Pages.Category.AddModel
+@{
+    ViewBag.Title = "Страница добавления новой категории";
+}
+
+<div asp-validation-summary="All"></div>
+<form method="post">
+    <p>
+        <label asp-for="Category.Title"></label><br />
+        <input asp-for="Category.Title" />
+    </p>
+    <p>
+        <label>
+            <input type="submit" name="submit" id="submit" value="Занести категорию в базу">
+        </label>
+    </p>
+</form>
