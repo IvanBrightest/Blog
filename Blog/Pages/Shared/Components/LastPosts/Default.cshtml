@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Blog.Models.Post>
+
+<div class="nav_title">Последние заметки</div>
+<ul class="lst_posts">
+    @foreach (var post in Model)
+    {
+        <li>
+            <a class="nav_link" href="/Post/Detail/@post.Id">@post.Title</a>
+        </li>
+    }
+</ul>
