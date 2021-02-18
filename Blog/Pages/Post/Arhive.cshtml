@@ -1,0 +1,25 @@
+﻿@page "{month:int}/{year:int}"
+@model MyApp.Namespace.ArhiveModel
+
+<br />
+@foreach (var post in Model.posts)
+{
+    <table align='center' class='post'>
+
+        <tr>
+            <td class='post_title'>
+                <p class='post_name'>
+					<img class='mini' align='left' src='%s'>
+					<a asp-page="/Post/Detail" asp-route-id="@post.Id" >@post.Title</a></p>
+                <p class='post_adds'>Дата добавления: @post.Date.ToString("dd MMMM yyyy")</p>
+                <p class='post_adds'>Автор урока: @post.Author</p>
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.Raw(@post.Description) <p class='post_view'>Просмотров: @post.View &nbsp;&nbsp; Рейтинг: <img src='img/.gif'></p></td>
+        </tr>
+
+    </table>
+    <br>
+    <br>
+}

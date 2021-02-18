@@ -152,6 +152,14 @@ p {
     margin-top: 7px;
 }
 
+.lst_arhive li {
+    list-style-image: url("/images/arr3.jpg");
+    background: url("/images/point.jpg") bottom repeat-x;
+    padding-bottom: 5px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
 .pstrnav {
     padding: 0px 10px 20px 15px;
     color: #424242;

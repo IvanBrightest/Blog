@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Blog.Models.GetArhiveViewModel>
+
+<div class="nav_title">Архив</div>
+<ul class="lst_arhive">
+    @foreach (var arhive in Model)
+    {
+        <li>
+            <a class="nav_link" asp-page="/Post/Arhive" asp-route-month="@arhive.MonthNum" asp-route-year="@arhive.Year">@arhive.Month @arhive.Year</a>
+        </li>
+    }
+</ul>
